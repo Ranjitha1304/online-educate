@@ -1,0 +1,143 @@
+    
+    .banner {
+        margin-top: 90px;
+    }
+    
+    .card-box {
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon-box {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 24px;
+      color: white;
+    }
+
+    .icon-design { background-color: #a5ded9; }
+    .icon-english { background-color: #bcb6f5; }
+    .icon-physics { background-color: #d7e6fb; }
+    .icon-business { background-color: #8ce9db; }
+    .icon-marketing { background-color: #f9d6a5; }
+    .icon-photo { background-color: #f4b3a5; }
+    .icon-dev { background-color: #b2b2b2; }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .card-box {
+  width: 220px;
+}
+
+
+    .card-text {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    .capitalize {
+      text-transform: capitalize;
+    }
+
+
+
+.section {
+  padding: 40px;
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    width:80%;
+margin: auto;
+
+  margin-bottom: 30px;
+  
+}
+
+.header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+.header a {
+  font-weight: 600;
+  color: #22B3AE;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.card-container {
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+width:80%;
+margin: auto;
+}
+
+.card {
+  width: 470px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(84, 84, 84, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.badge {
+  background-color: #EF4C5D;
+  color: #fff;
+  font-weight: bold;
+  padding: 20px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: fit-content;
+}
+
+.card-content {
+  margin-top: 30px;
+  color: white;
+}
+
+.card-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 250px;
+}
+

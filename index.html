@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar</title>
+
+      <!-- Favicon (logo) -->
+    <link rel="icon" type="image/png" href="./assets/images/logo.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+  <div class="container px-3 d-flex align-items-center">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center  me-3" href="#">
+      <img src="./assets/images/logo.png" alt="Logo" height="50" class="me-2" />
+    </a>
+
+    <!-- Navbar Toggle for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav d-flex align-items-center mb-2 mb-lg-0 me-auto gap-5">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./portal.html">Exam portal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./careers.html">Careers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./aboutus.html">About Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Log In & Sign Up Buttons -->
+    <div class="d-flex align-items-center gap-5 ms-3">
+      <button class="btn btn-login">Log in</button>
+      <button class="btn btn-signup">Sign Up</button>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<section class="hero-section">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap">
+    <!-- Left content -->
+    <div class="hero-left">
+      <h1><span class="highlight">Studying</span> Online is<br>now much easier</h1>
+      <p>
+        TOTC is an interesting platform that will teach you in a more interactive way
+      </p>
+      <div class="cta-buttons">
+        <button class="btn-signup">sign up</button>
+        <!-- <div class="play-btn">
+          <img src="play-icon.png" alt="Play" />
+        </div> -->
+              <div class="play-button"></div>
+
+
+        <span class="try-text">Try to demo exam</span>
+      </div>
+    </div>
+
+    <!-- Right content -->
+    <div class="hero-right position-relative">
+      <img src="./assets/images/homegirl.png" alt="Girl" class="girl-img" />
+
+      <!-- Floating Cards -->
+      <div class=" card1">
+        <img src="./assets/images/right1.png" alt="Calendar" />
+        <!-- <div>
+          <strong>250k</strong><br />
+          Assisted Student
+        </div> -->
+      </div>
+
+      <div class="card2">
+        <img src="./assets/images/right2.png" alt="Chart" />
+      </div>
+
+      <div class="card3">
+        <img src="./assets/images/right3.png" alt="Avatar" />
+        <!-- <div>
+          <strong>User Experience Class</strong><br />
+          <small>Today at 12.00 PM</small><br />
+          <button class="btn-now">Join Now</button>
+        </div> -->
+      </div>
+
+      <div class="card4">
+        <img src="./assets/images/right4.png" alt="Tick" />
+        <!-- <div>
+          <strong>Congratulations</strong><br />
+          Your admission completed
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Curved Bottom -->
+  <!-- <div class="curve-shape"></div> -->
+
+</section>
+
+
+<div class="curve-divider"></div>
+
+
+
+<!-- explore exam section -->
+ <div class="exam-port">
+  <span>EXAMINATION</span>
+<span class="portal">PORTAL</span> 
+</div>
+<div class="explore">
+  <h1>Explore Our Exam</h1>
+  <button class="explore-btn">EXPLORE ALL</button>
+</div>
+  <div class="container py-5">
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-4">
+        <div class="card shadow-sm custom-card peach-card">
+          <img src="./assets/images/explore1.png" class="card-img-top " alt="Design Icon">
+          <div class="card-body text-center">
+            <h5 class="card-title text-capitalize fw-bold text-darkgreen">design</h5>
+            <p class="card-text text-muted small">Sky was cloudless and of a deep dark blue spectacle before us was indeed</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 offset-md-1">
+        <div class="card shadow-sm custom-card peach-card card-new">
+          <img src="./assets/images/explore2.png" class="card-img-top" alt="English Icon">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold text-darkgreen">English</h5>
+            <p class="card-text text-muted small">Even the all-powerful Pointing has no control about the blind texts.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 offset-md-1">
+        <div class="card shadow-sm custom-card white-card">
+          <div class="circle bg-peach mx-auto mt-4"></div>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold text-darkgreen">Science</h5>
+            <p class="card-text text-muted small">Unorthographic life One day however a small line of blind text.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm custom-card peach-card">
+          <img src="./assets/images/explore3.png" class="card-img-top" alt="Physics Icon">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold text-darkgreen">Physics</h5>
+            <p class="card-text text-muted small">However a small line of blind text by the name.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm custom-card white-card">
+          <img src="./assets/images/explore4.png" class="card-img-top" alt="GK Icon">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold text-darkgreen">General Knowledge</h5>
+            <p class="card-text text-muted small">Text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+<!-- statistics section -->
+
+  <div class="stats-section">
+    <div class="stat-box">
+      <h2>15K+</h2>
+      <p>Students</p>
+    </div>
+    <div class="stat-box">
+      <h2>75%</h2>
+      <p>Total success</p>
+    </div>
+    <div class="stat-box">
+      <h2>35</h2>
+      <p>Main questions</p>
+    </div>
+    <div class="stat-box">
+      <h2>16 +</h2>
+      <p>Years of experience</p>
+    </div>
+  </div>
+
+  <!-- educate section -->
+
+  <section class="educate-section">
+    <h2 class="educate-title">What is Educate <span>?</span></h2>
+    <p class="educate-desc">
+      TOTC is a platform that allows educators to create online classes whereby they can store the
+      course materials online; manage assignments, quizzes and exams; monitor due dates; grade
+      results and provide students with feedback all in one place.
+    </p>
+  </section>
+
+<section class="educate-img">
+  <img src="./assets/images/edu1.png">
+  <img src="./assets/images/edu2.png">
+</section>
+
+
+<!-- promo section -->
+ 
+
+<div class="promo-section">
+  <div class="promo-left">
+    <div class="green-circle"></div>
+    <h2>
+      Everything you can do in a physical classroom, you can do with <b>Educate</b>
+    </h2>
+    <p>
+      school management software helps traditional and online schools manage scheduling, attendance, payments and virtual classrooms all in one secure cloud-based system.
+    </p>
+    <a href="#">Learn more</a>
+  </div>
+
+  <div class="promo-right">
+    <div class="blue-rect"></div>
+    <div class="green-rect"></div>
+    <div class="video-container">
+      <video src="./assets/videos/samplevideo.mp4"></video>
+      <!-- <img src="https://images.pexels.com/photos/7176324/pexels-photo-7176324.jpeg" alt="Classroom Image"> -->
+      <!-- <div class="play-button"></div> -->
+    </div>
+  </div>
+</div>
+
+<!-- all-in-one section -->
+
+  <section class="text-center py-5">
+    <h2 class="fw-bold heading">All-In-One <span class="text-secondary">Educate</span></h2>
+    <p class="text-muted mt-3 px-3">
+      TOTC is one powerful online software suite that combines all the<br>
+      tools needed to run a successful school or office.
+    </p>
+
+    <div class="container mt-5">
+      <div class="row justify-content-center g-4">
+        <!-- Mock Exam -->
+        <div class="col-md-4">
+          <div class="box text-center p-4">
+            <div class="icon-circle bg-primary mb-3">
+              <i class="bi bi-file-earmark-text-fill text-white fs-3"></i>
+            </div>
+            <h5 class="fw-bold">Mock Exam</h5>
+            <p class="text-muted">
+              Simple and secure control of your organization’s financial and legal transactions. Send customized invoices and contracts
+            </p>
+          </div>
+        </div>
+
+        <!-- Easy Scheduling -->
+        <div class="col-md-4">
+          <div class="box text-center p-4">
+            <div class="icon-circle bg-success mb-3">
+              <i class="bi bi-calendar-event-fill text-white fs-3"></i>
+            </div>
+            <h5 class="fw-bold">Easy Scheduling &<br>Attendance Tracking</h5>
+            <p class="text-muted">
+              Schedule and reserve classrooms at one campus or multiple campuses. Keep detailed records of student attendance
+            </p>
+          </div>
+        </div>
+
+        <!-- Main Exam -->
+        <div class="col-md-4">
+          <div class="box text-center p-4">
+            <div class="icon-circle bg-info mb-3">
+              <i class="bi bi-people-fill text-white fs-3"></i>
+            </div>
+            <h5 class="fw-bold">Main exam</h5>
+            <p class="text-muted">
+              Simple and secure control of your organization’s financial and legal transactions. Send customized invoices and contracts
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- features section -->
+
+
+<div class="container">
+        <h5 class="feature-title">Our <span>Features</span></h5>
+
+  <div class="row align-items-center">
+    <!-- Left Image Column -->
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <img src="./assets/images/features left.png" alt="Feature Visual" class="feature-image">
+    </div>
+
+    <!-- Right Content Column -->
+    <div class="col-lg-6">
+      <h2 class="feature-subtitle mt-3">
+        A <span class="highlight">user interface</span> designed<br />
+        for the classroom
+      </h2>
+
+      <div class="mt-4">
+        <div class="feature-text">
+          <i class="bi bi-bounding-box"></i>
+          <!-- <img src="https://img.icons8.com/fluency-systems-regular/48/000000/squared-menu.png" alt="Grid Icon"> -->
+          <span>Teachers don’t get lost in the grid view and have a dedicated Podium space.</span>
+        </div>
+
+        <div class="feature-text">
+          <i class="bi bi-back"></i>
+          <!-- <img src="https://img.icons8.com/fluency-systems-regular/48/000000/podium-with-audience.png" alt="Podium Icon"> -->
+          <span>TA’s and presenters can be moved to the front of the class.</span>
+        </div>
+
+        <div class="feature-text">
+          <i class="bi bi-person-check-fill"></i>
+          <!-- <img src="https://img.icons8.com/fluency-systems-regular/48/000000/group.png" alt="Group Icon"> -->
+          <span>Teachers can easily see all students and class data at one time.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- resource section -->
+
+  <div class="container py-5">
+    <div class="row g-5">
+      <!-- Left Main Card -->
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm">
+          <img src="./assets/images/latest1.png" class="card-img-latest rounded-4" alt="Zoom Class"/>
+          <div class="card-body px-0">
+            <span class="badge rounded-pill bg-info text-white px-3 py-2 mb-2">NEW</span>
+            <h5 class="card-title fw-semibold">Class adds to its balance sheet for a Zoom-friendly educate solution</h5>
+            <p class="card-text text-muted mb-1">
+              Class, launched less than a year ago by Blackboard co-founder Michael , integrates exclusively...
+            </p>
+            <a href="#" class="read-link text-decoration-underline fw-medium">Read more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-6 d-flex flex-column ">
+        <!-- Top Right -->
+        <div class="d-flex mb-4">
+          <img src="./assets/images/latest2.png" alt="Zoom Investors" class="rounded-4 me-3 latest"/>
+          <div>
+            <p class="fw-medium mb-1">Zoom’s earliest investors are betting millions on a better Zoom for schools</p>
+          </div>
+        </div>
+
+        <!-- Bottom Right -->
+        <div class="d-flex">
+          <div class="position-relative me-3">
+            <img src="./assets/images/latest3.png" alt="LMS Features" class="rounded-4 latest" />
+            <!-- <span class="badge bg-info text-white position-absolute top-0 start-0 m-1">NEW</span> -->
+          </div>
+          <div>
+            <p class="fw-medium mb-1">Former Blackboard CEO Raises to Bring LMS Features to Zoom Classrooms</p>
+            <p class="text-muted small mb-0">
+              This year, investors have reaped big financial returns from betting on Zoom…
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- newsletter section -->
+
+<div class="newsletter-section">
+  <h2>Subscribe to get our Newsletter</h2>
+  <form id="newsletterForm" novalidate>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <button type="submit" class="news-btn">Subscribe</button>
+  </form>
+  <p class="error-message" id="errorMsg"></p>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer-section text-white">
+  <div class="container py-5">
+    <div class="row text-center text-md-start">
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Our Exam</a></li>
+          <li><a href="#">Result</a></li>
+          <li><a href="#">Payment</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- How it work -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">How it work</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">case study</a></li>
+          <li><a href="#">career</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">CONTACT INFO</h5>
+        <ul class="list-unstyled contact-info">
+          <li><span>Phone number :</span> 9183736373</li>
+          <li><span>Email :</span> mg@gmail.com</li>
+          <li><span>Address :</span> chennai -627006</li>
+        </ul>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-google"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-line my-4">
+
+    <div class="text-center small footer-bottom">
+      <span>Careers</span>
+      <span class="divider">|</span>
+      <span>Privacy Policy</span>
+      <span class="divider">|</span>
+      <span>Terms & Conditions</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/newsletter.js"></script>
+
+</body>
+</html>
