@@ -33,7 +33,7 @@
     loginForm.classList.remove("hidden");
     registerForm.classList.add("hidden");
     // authHeading.innerText = "Exam the is simply";
-    authImage.src = "/assets/images/login.png";
+    authImage.src = "assets/images/login.png";
   }
 
   function showRegister() {
@@ -42,7 +42,7 @@
     registerForm.classList.remove("hidden");
     loginForm.classList.add("hidden");
     // authHeading.innerText = "welcome to ways simply";
-    authImage.src = "/assets/images/register.png";
+    authImage.src = "assets/images/register.png";
   }
 
   loginBtn.addEventListener("click", () => openModal("login"));
