@@ -115,10 +115,18 @@
       object-fit: cover;
     }
 
+.left-image:hover {
+    transform: scale(1.1);
+}
+
     .testimonial-content {
       flex: 1;
       min-width: 300px;
     }
+
+.testimonial-content:hover {
+    transform: scale(1.1);
+}
 
     h2.test-header {
       font-size: 20px;
