@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navbar</title>
+  <title>Educate</title>
 
       <!-- Favicon (logo) -->
     <link rel="icon" type="image/png" href="./assets/images/logo.png">
@@ -23,7 +23,7 @@
 <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
   <div class="container px-3 d-flex align-items-center">
     <!-- Logo -->
-    <a class="navbar-brand d-flex align-items-center  me-3" href="#">
+    <a class="navbar-brand d-flex align-items-center  me-3" href="./index.html">
       <img src="./assets/images/logo.png" alt="Logo" height="50" class="me-2" />
     </a>
 
@@ -60,6 +60,136 @@
     </div>
   </div>
 </nav>
+
+
+
+
+
+
+
+
+
+<!-- Login/Register Modal -->
+<div id="authModal" class="auth-modal">
+  <div class="auth-container">
+    <div class="auth-left">
+      <img id="auth-image" src="./assets/images/login.png" alt="Classroom" />
+      <div class="auth-text">
+        <!-- <h2 id="auth-heading">Exam the is simply</h2>
+        <p>Lorem Ipsum is simply</p> -->
+      </div>
+    </div>
+    <div class="auth-right">
+      <h4>Welcome to lorem..!</h4>
+      <div class="auth-tabs">
+        <button id="tab-login" class="active">Login</button>
+        <button id="tab-register">Register</button>
+      </div>
+      <p class="auth-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="auth-form">
+        <label>User name</label>
+        <div class="input-wrapper">
+          <input type="text" id="loginUsername" placeholder="Enter your User name" required />
+        </div>
+
+        <label>Password</label>
+        <div class="input-wrapper">
+          <input type="password" id="loginPassword" placeholder="Enter your Password" required />
+          <span class="toggle-password" onclick="togglePassword('loginPassword', this)">👁️</span>
+        </div>
+
+        <div class="form-options">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#">Forgot Password ?</a>
+        </div>
+
+        <button type="submit" class="auth-submit">Login</button>
+      </form>
+
+      <!-- Register Form -->
+      <form id="registerForm" class="auth-form hidden">
+        <label>Email Address</label>
+        <div class="input-wrapper">
+          <input type="email" id="regEmail" placeholder="Enter your Email Address" required />
+        </div>
+
+        <label>User name</label>
+        <div class="input-wrapper">
+          <input type="text" id="regUsername" placeholder="Enter your User name" required />
+        </div>
+
+        <label>Password</label>
+        <div class="input-wrapper">
+          <input type="password" id="regPassword" placeholder="Enter your Password" required />
+          <span class="toggle-password" onclick="togglePassword('regPassword', this)">👁️</span>
+        </div>
+
+        <button type="submit" class="auth-submit">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop" id="modalBackdrop"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -253,7 +383,12 @@
     <div class="blue-rect"></div>
     <div class="green-rect"></div>
     <div class="video-container">
-      <video src="./assets/videos/samplevideo.mp4"></video>
+                  <video controls>
+                <source src="./assets/videos/samplevideo.mp4" type="video/mp4">
+                <!-- Your browser does not support the video tag. -->
+            </video>
+
+      <!-- <video src="./assets/videos/samplevideo.mp4"></video> -->
       <!-- <img src="https://images.pexels.com/photos/7176324/pexels-photo-7176324.jpeg" alt="Classroom Image"> -->
       <!-- <div class="play-button"></div> -->
     </div>
@@ -359,6 +494,11 @@
 
 
 
+<div class="latest-heading">
+  <h2>Latest News And Resources</h2>
+  <p>See the developments that have occured to in the world</p>
+</div>
+
 <!-- resource section -->
 
   <div class="container py-5">
@@ -428,7 +568,7 @@
       <div class="col-md-4 mb-4">
         <h5 class="footer-title">Quick Links</h5>
         <ul class="list-unstyled">
-          <li><a href="#">Home</a></li>
+          <li><a href="./index.html">Home</a></li>
           <li><a href="#">Our Exam</a></li>
           <li><a href="#">Result</a></li>
           <li><a href="#">Payment</a></li>
@@ -454,13 +594,13 @@
           <li><span>Email :</span> mg@gmail.com</li>
           <li><span>Address :</span> chennai -627006</li>
         </ul>
-        <div class="social-icons mt-3">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-google"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
+<div class="social-icons mt-3">
+  <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fab fa-google"></i></a>
+  <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+  <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+</div>
       </div>
     </div>
 
@@ -477,9 +617,19 @@
 </footer>
 
 
+
+
+
+
+
+
+
+
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/newsletter.js"></script>
+<script src="./assets/js/login.js"></script>
 
 </body>
 </html>
