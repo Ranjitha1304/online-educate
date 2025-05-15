@@ -145,3 +145,21 @@ margin: auto;
   max-width: 250px;
 }
 
+@media (min-width:320px) and (max-width:767px){
+
+ .banner img{
+        margin-top: 70px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    
+  }
