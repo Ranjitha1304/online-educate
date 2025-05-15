@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Educate</title>
+  <title>Exam Portal | Educate</title>
 
         <!-- Favicon (logo) -->
     <link rel="icon" type="image/png" href="./assets/images/logo.png">
@@ -57,10 +57,62 @@
     <!-- Log In & Sign Up Buttons -->
     <div class="d-flex align-items-center gap-5 ms-3">
       <button class="btn btn-login">Log in</button>
-      <button class="btn btn-signup">Sign Up</button>
+      <button class="btn btn-signup">SignUp</button>
     </div>
   </div>
 </nav>
+
+
+
+<!-- Login/Register Modal -->
+<div class="auth-modal" id="authModal">
+  <div class="auth-content">
+    <button class="close-btn" onclick="closeAuthModal()">×</button>
+    <div class="auth-left">
+      <img src="/mnt/data/login.png" id="authImage" alt="Login Image" />
+      <div class="auth-text">
+        <!-- <h2 id="imageTitle">Exam the is simply</h2>
+        <p>Lorem Ipsum is simply</p> -->
+      </div>
+    </div>
+    <div class="auth-right">
+      <h4>Welcome to lorem..!</h4>
+      <div class="auth-tabs">
+        <button id="loginTab" class="active" onclick="showLogin()">Login</button>
+        <button id="registerTab" onclick="showRegister()">Register</button>
+      </div>
+      <p class="auth-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+      <!-- Login Form -->
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <label>User name</label>
+        <input type="text" id="loginUsername" placeholder="Enter your User name" required />
+        <label>Password</label>
+        <input type="password" id="loginPassword" placeholder="Enter your Password" required />
+        <div class="extras">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+
+      <!-- Register Form -->
+       
+      <form id="registerForm" onsubmit="handleRegister(event)" style="display: none;">
+        <label>Email Address</label>
+        <input type="email" id="registerEmail" placeholder="Enter your Email Address" required />
+        <label>User name</label>
+        <input type="text" id="registerUsername" placeholder="Enter your User name" required />
+        <label>Password</label>
+        <input type="password" id="registerPassword" placeholder="Enter your Password" required />
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
 
 <!-- banner section -->
  <div class="banner">
@@ -228,8 +280,8 @@
       <div class="col-md-4 mb-4">
         <h5 class="footer-title">How it work</h5>
         <ul class="list-unstyled">
-          <li><a href="#">case study</a></li>
-          <li><a href="#">career</a></li>
+          <li><a href="#">Case study</a></li>
+          <li><a href="#">Career</a></li>
           <li><a href="#">Testimonials</a></li>
         </ul>
       </div>
