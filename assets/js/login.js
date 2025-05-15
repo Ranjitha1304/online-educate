@@ -1,95 +1,88 @@
+  const authModal = document.getElementById('authModal');
+  const loginForm = document.getElementById('loginForm');
+  const registerForm = document.getElementById('registerForm');
+  const loginTab = document.getElementById('loginTab');
+  const registerTab = document.getElementById('registerTab');
+  const authImage = document.getElementById('authImage');
+  const imageTitle = document.getElementById('imageTitle');
 
-  const loginBtn = document.querySelector(".btn-login");
-  const signupBtn = document.querySelector(".btn-signup");
-  const modal = document.getElementById("authModal");
-  const backdrop = document.getElementById("modalBackdrop");
+  // Open modal from nav buttons
+  document.querySelector('.btn-login').addEventListener('click', () => {
+    openAuthModal('login');
+  });
 
-  const tabLogin = document.getElementById("tab-login");
-  const tabRegister = document.getElementById("tab-register");
-  const loginForm = document.getElementById("loginForm");
-  const registerForm = document.getElementById("registerForm");
-//   const authHeading = document.getElementById("auth-heading");
+  document.querySelector('.btn-signup').addEventListener('click', () => {
+    openAuthModal('register');
+  });
 
-  const authImage = document.getElementById("auth-image");
-
-  function openModal(defaultTab) {
-    modal.style.display = "flex";
-    backdrop.style.display = "block";
-    if (defaultTab === "login") {
+  function openAuthModal(mode) {
+    authModal.style.display = 'flex';
+    if (mode === 'login') {
       showLogin();
     } else {
       showRegister();
     }
   }
 
-  function closeModal() {
-    modal.style.display = "none";
-    backdrop.style.display = "none";
+  function closeAuthModal() {
+    authModal.style.display = 'none';
   }
 
   function showLogin() {
-    tabLogin.classList.add("active");
-    tabRegister.classList.remove("active");
-    loginForm.classList.remove("hidden");
-    registerForm.classList.add("hidden");
-    // authHeading.innerText = "Exam the is simply";
-    authImage.src = "assets/images/login.png";
+    loginForm.style.display = 'flex';
+    registerForm.style.display = 'none';
+    loginTab.classList.add('active');
+    registerTab.classList.remove('active');
+    authImage.src = 'assets/images/login.png';
+    imageTitle.textContent = 'Exam the is simply';
   }
 
   function showRegister() {
-    tabRegister.classList.add("active");
-    tabLogin.classList.remove("active");
-    registerForm.classList.remove("hidden");
-    loginForm.classList.add("hidden");
-    // authHeading.innerText = "welcome to ways simply";
-    authImage.src = "assets/images/register.png";
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'flex';
+    loginTab.classList.remove('active');
+    registerTab.classList.add('active');
+    authImage.src = 'assets/images/register.png';
+    imageTitle.textContent = 'welcome to ways simply';
   }
 
-  loginBtn.addEventListener("click", () => openModal("login"));
-  signupBtn.addEventListener("click", () => openModal("register"));
-
-  tabLogin.addEventListener("click", showLogin);
-  tabRegister.addEventListener("click", showRegister);
-
-  backdrop.addEventListener("click", closeModal);
-
-  function togglePassword(fieldId, icon) {
-    const field = document.getElementById(fieldId);
-    if (field.type === "password") {
-      field.type = "text";
-      icon.innerText = "🙈";
-    } else {
-      field.type = "password";
-      icon.innerText = "👁️";
-    }
-  }
-
-  // Validation (basic)
-  loginForm.addEventListener("submit", function (e) {
+  function handleRegister(e) {
     e.preventDefault();
-    const username = document.getElementById("loginUsername").value.trim();
-    const password = document.getElementById("loginPassword").value.trim();
-    if (!username || !password) {
-      alert("Please enter all fields in login.");
-      return;
-    }
-    alert("Login Successful!");
-    closeModal();
-  });
+    const email = document.getElementById('registerEmail').value.trim();
+    const username = document.getElementById('registerUsername').value.trim();
+    const password = document.getElementById('registerPassword').value.trim();
 
-  registerForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const email = document.getElementById("regEmail").value.trim();
-    const username = document.getElementById("regUsername").value.trim();
-    const password = document.getElementById("regPassword").value.trim();
     if (!email || !username || !password) {
-      alert("Please enter all fields in register.");
+      alert('All fields are required.');
       return;
     }
-    if (!email.includes("@")) {
-      alert("Invalid email.");
-      return;
+
+    const user = { email, username, password };
+    localStorage.setItem('user_' + username, JSON.stringify(user));
+    alert('Registration successful! Now login.');
+    showLogin();
+  }
+
+  function handleLogin(e) {
+    e.preventDefault();
+    const username = document.getElementById('loginUsername').value.trim();
+    const password = document.getElementById('loginPassword').value.trim();
+
+    const savedUser = JSON.parse(localStorage.getItem('user_' + username));
+
+    if (savedUser && savedUser.password === password) {
+      alert('Login successful!');
+      closeAuthModal();
+    } else {
+      alert('Invalid credentials. Please sign up first.');
     }
-    alert("Registration Successful!");
-    closeModal();
+  }
+
+  // Open Register Modal
+document.querySelectorAll('.btn-signup').forEach(button => {
+  button.addEventListener('click', () => {
+    openAuthModal('register');
   });
+});
+
+
