@@ -1,7 +1,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  /* padding-top: 70px; Adjust based on navbar height */
+
 }
 
 .custom-navbar {
@@ -57,38 +57,31 @@ a.nav-link {
 
 .auth-modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  z-index: 1001;
-  justify-content: center;
-  align-items: center;
-  margin-top: 70px;
-}
-
-.modal-backdrop {
-  display: none;
-  position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  margin-top: 60px;
+   overflow-y: auto;
 }
 
-.auth-container {
+.auth-content {
   display: flex;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
   width: 80%;
   max-width: 1000px;
-  height: 600px;
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow-y: auto;
+  max-height: 90vh;
 }
 
 .auth-left {
-  width: 50%;
-  background-color: #f3f3f3;
+  flex: 1;
   position: relative;
 }
 
@@ -100,106 +93,92 @@ a.nav-link {
 
 .auth-text {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   left: 20px;
-  color: white;
-  text-shadow: 0 0 5px black;
+  color: #fff;
 }
 
-
-.auth-close {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 28px;
+.auth-text h2 {
   font-weight: bold;
-  color: #000;
-  cursor: pointer;
-  z-index: 10;
 }
-
-.auth-close:hover {
-  color: #f00;
-}
-
-
 
 .auth-right {
-  width: 50%;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex: 1;
+  padding: 40px 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .auth-tabs {
   display: flex;
-  gap: 10px;
   margin-bottom: 20px;
 }
 
 .auth-tabs button {
-  padding: 10px 20px;
-  border-radius: 30px;
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
   border: none;
-  background-color: #a4e0e0;
-  cursor: pointer;
+  background: #aee1e1;
+  margin: 0 5px;
   font-weight: bold;
-  color: black;
+  cursor: pointer;
 }
 
-.auth-tabs button.active {
-  background-color: #05003b;
+.auth-tabs .active {
+  background: #000033;
   color: white;
 }
 
-.auth-form {
+.auth-desc {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
-.input-wrapper {
-  position: relative;
+form label {
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
-.input-wrapper input {
-  width: 100%;
-  padding: 10px 35px 10px 15px;
-  border: 1px solid #00bcd4;
-  border-radius: 30px;
+form input {
+  padding: 10px;
+  border: 1px solid #aee1e1;
+  border-radius: 20px;
   outline: none;
 }
 
-.toggle-password {
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.form-options {
+.extras {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
+  margin: 10px 0;
 }
 
-.auth-submit {
-  background-color: #05003b;
+.submit-btn {
+  margin-top: 20px;
+  background: #000033;
   color: white;
-  padding: 12px 30px;
   border: none;
-  border-radius: 25px;
-  font-weight: bold;
+  padding: 12px;
+  border-radius: 20px;
   cursor: pointer;
 }
-
-.hidden {
-  display: none !important;
-}
-
 
 
 
@@ -526,6 +505,7 @@ img.card-img-top  {
 .educate-img {
   max-width:80%;
   margin: auto;
+  /* margin-left: 70px; */
   margin-bottom: 40px;
   cursor: pointer;
 }
@@ -949,11 +929,86 @@ button:hover {
 
 @media (min-width:320px) and (max-width:767px){
   
+.gap-5 {
+  gap:1rem !important;
+}
+
+/* .navbar>.container { */
+  /* justify-content: left;
+} */
   .educate-img img 
   {
-width:350px;
+width:225px;
 height:auto;
+padding-right: 0px;
 }
+  .educate-img img 
+{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.card1,.card2,.card3,.card4 {
+  display:none;
+}
+.btn-login,.btn-signup {
+  font-size: 16px;
+height:40px;
+    padding: 6px 28px;
+}
+
+.btn-signup {
+  font-size: 16px;
+height:40px;
+text-align: left;
+}
+
+.hero-section {
+  margin-top: 50px;
+}
+.hero-left h1 {
+    font-size: 26px;
+}
+.cta-buttons {
+  flex-direction: column;
+}
+
+.explore h1 {
+    font-size: 16px;
+}
+.exam-port {
+    font-size: 24px;
+}
+
+.explore button {
+  padding:0;
+}
+
+
+img.latest{
+width:150px;
+height:100px;
+}
+
+img.latest1{
+width:120px;
+height:120px;
+}
+
+
+
+.close-btn {
+    top: 248px;
+    right: -57px;
+z-index: 1000;
+}
+
+
+
+
+
+
+
 }
 
 
@@ -1001,8 +1056,42 @@ height:auto;
   .auth-right {
     padding: 20px;
   }
+    .auth-content {
+    flex-direction: column;
+  }
+
+  .auth-left, .auth-right {
+    width: 100%;
+  }
+
+  .auth-left img {
+    height: 250px;
+  }
+
+}
+@media (min-width:768px) and (max-width:1023px){
+
+.hero-left h1 {
+    font-size: 38px;
 }
 
+.card3 img {
+    bottom: 0px;
+
+}
+
+.card4 img {
+    bottom: 120px;
+    right: 1px;
+}
+.educate-img {
+    max-width: 100%;
+}
+
+
+
+
+}
 
 
 
@@ -1024,7 +1113,6 @@ height:auto;
         display: none;
       }
   .stats-section {
-    flex-direction: column;
     align-items: center;
     gap: 30px;
   }
