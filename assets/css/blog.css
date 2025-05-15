@@ -386,10 +386,35 @@ width:90%;
 
 
 
+@media (min-width:320px) and (max-width:767px){
+
+.blog-images {
+
+flex-direction: column;
+}
+
+.blog-container {
+  margin-top: 175px;
+}
+.blog-cards {
+  flex-direction: column;
+}
 
 
+.card-blog {
+  width:100%;
+}
 
 
+}
+
+@media (min-width:768px) and (max-width:1023px){
+.blog-images {
+
+flex-direction: column;
+}
+
+}
 
 
 /* Responsive Media Query */
@@ -408,4 +433,8 @@ width:90%;
     max-width: 100%;
     margin-top: 30px;
   }
+
+  .blog-images {
+    gap: 0px;
+}
 }
